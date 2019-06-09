@@ -11,3 +11,16 @@ I have range of strings starting with random amount of letters (from 0 to more t
 * How can I generate all of them in array if I'm given just the starting one and the ending one?
 
 * e.g. from ZS11 to ZS15 I need an array with ZS11, ZS12, ZS13, ZS14, ZS15
+
+Use
+```php
+<?php
+include "CodeGenerate.php";
+
+$starting_code = "S001";
+$end_code = "S015";
+$codeGenerator = new CodeGenerator();
+$codes = $codeGenerator->generate($starting_code, $end_code);
+print_r($codes);
+
+```
